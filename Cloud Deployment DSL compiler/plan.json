@@ -1,0 +1,35 @@
+Deployment MyApp
+ provider: aws
+ region: us-east-1
+ Services:
+  - web: image=<none> cpu=1 mem=512 replicas=1
+ Constraints:
+  - cost = 500
+  - latency = 80
+Deployment MyApp
+ provider: aws
+ region: us-east-1
+ Services:
+  - web: image=<none> cpu=1 mem=512 replicas=2
+ Constraints:
+  - cost = 500
+  - latency = 80
+{
+  "deployment": "MyApp",
+  "provider": "aws",
+  "region": "us-east-1",
+  "services": [
+    {
+      "name": "web",
+      "image": "",
+      "cpu": 1,
+      "mem": 512,
+      "replicas": 2,
+      "env": [],
+    }
+  ],
+  "constraints": [
+    {"cost": 500},
+    {"latency": 80}
+  ]
+}

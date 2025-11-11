@@ -1,0 +1,3 @@
+=== Parsed Deployment (before optimize) ===
+=== After Optimization ===
+=== Emitting plan to stdout ===
